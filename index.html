@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farma Franca | Saúde e Bem-estar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            yellow: '#FFCC00',
+                            dark: '#111111',
+                            gray: '#222222'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white overflow-x-hidden relative">
+
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-yellow/20 rounded-full blur-[120px] animate-blob"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
+        <div class="absolute top-[40%] left-[40%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[120px] animate-blob animation-delay-4000"></div>
+    </div>
+
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight text-white">
+                FARMA <span class="text-brand-yellow">FRANCA</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-300 hover:text-brand-yellow transition-colors">Início</a>
+                <a href="#sobre" class="text-gray-300 hover:text-brand-yellow transition-colors">Sobre</a>
+                <a href="#servicos" class="text-gray-300 hover:text-brand-yellow transition-colors">Serviços</a>
+                <a href="#loja" class="text-gray-300 hover:text-brand-yellow transition-colors">Loja</a>
+                <a href="#contato" class="text-gray-300 hover:text-brand-yellow transition-colors">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/556740422737" target="_blank" class="hidden md:flex items-center gap-2 bg-brand-yellow/10 border border-brand-yellow/50 text-brand-yellow px-5 py-2 rounded-full hover:bg-brand-yellow hover:text-black transition-all duration-300 backdrop-blur-md">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>(67) 4042-2737</span>
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 md:hidden flex-col items-center py-6 space-y-4">
+            <a href="#inicio" class="text-xl text-white">Início</a>
+            <a href="#sobre" class="text-xl text-white">Sobre</a>
+            <a href="#servicos" class="text-xl text-white">Serviços</a>
+            <a href="#loja" class="text-xl text-white">Loja</a>
+            <a href="#contato" class="text-xl text-white">Contato</a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="img/1.jfif" alt="Farma Franca Fachada" class="w-full h-full object-cover animate-slow-zoom opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center reveal">
+            <div class="inline-block px-4 py-1 mb-4 border border-brand-yellow/30 rounded-full bg-brand-yellow/10 backdrop-blur-md">
+                <span class="text-brand-yellow font-semibold tracking-wider text-sm uppercase">Sua saúde em primeiro lugar</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Cuidando de Você <br>e da <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-white">Sua Família</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                Qualidade, confiança e atendimento humanizado. Encontre tudo o que precisa na Farma Franca.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contato" class="px-8 py-4 bg-brand-yellow text-brand-dark font-bold rounded-xl hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,204,0,0.4)]">
+                    Fale Conosco
+                </a>
+                <a href="#servicos" class="px-8 py-4 glass text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
+                    Nossos Serviços
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 reveal slide-right">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-brand-yellow/20 transform translate-x-4 translate-y-4 rounded-2xl transition-transform group-hover:translate-x-6 group-hover:translate-y-6"></div>
+                        <div class="relative rounded-2xl shadow-2xl border border-white/10 overflow-hidden h-[400px]">
+                            <img src="img/1.jfif" alt="Atendimento Farma Franca" class="w-full h-full object-cover object-left hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 glass p-6 rounded-xl border border-white/20 hidden md:block">
+                            <p class="text-brand-yellow font-bold text-3xl">Desde 2021</p>
+                            <p class="text-gray-300 text-sm">Cuidando de Campo Grande</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 reveal slide-left">
+                    <h2 class="text-sm font-bold text-brand-yellow uppercase tracking-widest mb-2">Quem Somos</h2>
+                    <h3 class="text-4xl font-bold mb-6">Compromisso com o seu Bem-Estar</h3>
+                    <div class="space-y-4 text-gray-300 leading-relaxed text-lg">
+                        <p>
+                            A Farma Franca nasceu com o propósito de cuidar da saúde e do bem-estar das pessoas, oferecendo medicamentos, produtos de higiene e perfumaria com qualidade, confiança e preços justos.
+                        </p>
+                        <p>
+                            Atuamos com responsabilidade, atendimento humanizado e compromisso com a nossa comunidade. Aqui, cada atendimento é feito com respeito, ética e atenção, porque entendemos que cuidar da saúde é cuidar de pessoas.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-white/10 flex gap-8">
+                        <div>
+                            <span class="block text-3xl font-bold text-white">4.8</span>
+                            <span class="text-sm text-gray-400">Avaliação Média</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-white">100%</span>
+                            <span class="text-sm text-gray-400">Dedicação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-white/5 backdrop-blur-3xl -z-10"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm font-bold text-brand-yellow uppercase tracking-widest mb-2">O que oferecemos</h2>
+                <h3 class="text-4xl font-bold">Nossas Especialidades</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl border border-white/10 hover:-translate-y-2 transition-transform duration-300 reveal group">
+                    <div class="w-14 h-14 bg-brand-yellow/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-yellow transition-colors">
+                        <svg class="w-8 h-8 text-brand-yellow group-hover:text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Farmácia Completa</h4>
+                    <p class="text-gray-400">Ampla variedade de medicamentos de referência, genéricos e similares com a garantia de procedência.</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl border border-white/10 hover:-translate-y-2 transition-transform duration-300 reveal delay-100 group">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
+                        <svg class="w-8 h-8 text-blue-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Perfumaria & Beleza</h4>
+                    <p class="text-gray-400">As melhores marcas de dermocosméticos, cuidados pessoais e higiene para você e sua família.</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl border border-white/10 hover:-translate-y-2 transition-transform duration-300 reveal delay-200 group">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                        <svg class="w-8 h-8 text-green-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Confiança e Preço Justo</h4>
+                    <p class="text-gray-400">Atendimento ético e humanizado, oferecendo produtos de qualidade com a segurança e economia que você merece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="loja" class="py-24 container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-sm font-bold text-brand-yellow uppercase tracking-widest mb-2">Nossa Estrutura</h2>
+            <h3 class="text-4xl font-bold">Venha nos Visitar</h3>
+        </div>
+        
+        <div class="relative w-full max-w-5xl mx-auto h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 reveal">
+            <img src="img/1.jfif" alt="Fachada Farma Franca" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+            
+            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-8 md:p-12">
+                <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+                    <div>
+                        <h4 class="text-3xl font-bold text-white mb-2">Fácil Acesso</h4>
+                        <p class="text-gray-300 max-w-lg">Localização privilegiada na Vila Rica com amplo estacionamento para sua comodidade e segurança.</p>
+                    </div>
+                    <a href="#contato" class="bg-brand-yellow text-brand-dark font-bold px-6 py-3 rounded-xl hover:bg-white transition-colors">
+                        Ver no Mapa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-brand-gray/30 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/3 space-y-8 reveal">
+                    <div>
+                        <h2 class="text-sm font-bold text-brand-yellow uppercase tracking-widest mb-2">Fale Conosco</h2>
+                        <h3 class="text-4xl font-bold mb-6">Onde Estamos</h3>
+                        <p class="text-gray-400 mb-8">Estamos prontos para lhe atender. Entre em contato ou faça-nos uma visita.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-white/5 rounded-lg border border-white/10 text-brand-yellow">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Endereço</h4>
+                                <p class="text-gray-400 text-sm">Rua Ceará, 2178, Sala 04</p>
+                                <p class="text-gray-400 text-sm">Vila Rica, Campo Grande - MS</p>
+                                <p class="text-gray-500 text-xs mt-1">CEP: 79.022-391</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-white/5 rounded-lg border border-white/10 text-brand-yellow">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Telefone / WhatsApp</h4>
+                                <p class="text-gray-400 text-sm">(67) 4042-2737</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-white/5 rounded-lg border border-white/10 text-brand-yellow">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Email</h4>
+                                <p class="text-gray-400 text-sm break-all">CAMPOGRANDE.ULTRAFARMA@GMAIL.COM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3 h-[400px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl reveal delay-100">
+                     <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1869.2206150108511!2d-54.59656410885376!3d-20.4470631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e989d54244a7%3A0xdd7a26276db5ed6e!2sUltrafarma%20-%20Unidade%20Campo%20Grande%20MS!5e0!3m2!1spt-BR!2sbr!4v1770325049997!5m2!1spt-BR!2sbr"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8 border-t border-white/10 text-center relative z-10">
+        <div class="container mx-auto px-6">
+            <p class="text-gray-500 mb-2">© 2026 Farma Franca Ltda. Todos os direitos reservados.</p>
+            <p class="text-gray-600 text-sm mb-4">CNPJ: 44.053.810/0001-81</p>
+            <button id="open-privacy" class="text-sm text-brand-yellow hover:underline">Política de Privacidade</button>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/556740422737" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 animate-pulse hover:animate-none group">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <div id="privacy-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm modal-overlay"></div>
+        <div class="bg-[#1a1a1a] text-gray-300 rounded-2xl p-8 max-w-lg w-full mx-4 border border-white/10 shadow-2xl relative z-10 transform transition-all scale-95 opacity-0 modal-content">
+            <h3 class="text-2xl font-bold text-white mb-4">Política de Privacidade</h3>
+            <div class="max-h-60 overflow-y-auto mb-6 space-y-3 text-sm pr-2 custom-scrollbar">
+                <p>A Farma Franca preza pela segurança de seus dados. Esta política descreve como tratamos suas informações.</p>
+                <p>1. Coleta de Dados: Coletamos apenas dados necessários para contato e prestação de serviços farmacêuticos.</p>
+                <p>2. Uso das Informações: Seus dados são utilizados exclusivamente para fins de atendimento e não são compartilhados com terceiros sem consentimento.</p>
+                <p>3. Segurança: Implementamos medidas técnicas para proteger suas informações pessoais.</p>
+                <button id="close-privacy" class="w-full bg-brand-yellow text-brand-dark font-bold py-3 rounded-xl hover:bg-white transition-colors mt-4">Entendi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
